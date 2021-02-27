@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 
 // Material UI Imports //
@@ -18,16 +19,20 @@ function Header ({searchTerm, handleChange, handleClick, value}){
         <div className="header">
             <div className="header__left">
                 <MenuIcon />
-                <img 
-                    className = "header__logo"
-                    src= 'https://upload.wikimedia.org/wikipedia/commons/9/98/YouTube_Logo.svg'
-                    alt = "Youtube Logo"
-                />
+                <Link to ='/'>
+                    <img 
+                        className = "header__logo"
+                        src= 'https://upload.wikimedia.org/wikipedia/commons/9/98/YouTube_Logo.svg'
+                        alt = "Youtube Logo"
+                    />
+                </Link>
             </div>
 
             <div className="header__input">
                 <input value={searchTerm} onChange={handleChange} text="text" placeholder="Search" />
-                <SearchIcon className = "header__inputButton" onClick={handleClick} />
+                <Link to={`/search/${searchTerm}`}>
+                  <SearchIcon className = "header__inputButton" onClick={handleClick} />
+                </Link>
             </div>
 
             <div className="header__icons">

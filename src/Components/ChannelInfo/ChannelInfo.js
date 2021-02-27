@@ -4,7 +4,7 @@ import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined';
 import VideoRow from '../VideoRow/VideoRow'
 
 function ChannelInfo ({searchData}){
-    if (!searchData) return "Search Youtube!"
+    if (!searchData) return ""
   
     let current = Math.round(new Date().getTime())
     let previous = Math.round(new Date(searchData.items[0].snippet.publishedAt));     
@@ -34,15 +34,15 @@ function ChannelInfo ({searchData}){
         }
     
         else if (elapsed < msPerMonth) {
-            return 'approximately ' + Math.round(elapsed/msPerDay) + ' days ago';   
+            return Math.round(elapsed/msPerDay) + ' days ago';   
         }
     
         else if (elapsed < msPerYear) {
-            return 'approximately ' + Math.round(elapsed/msPerMonth) + ' months ago';   
+            return Math.round(elapsed/msPerMonth) + ' months ago';   
         }
     
         else {
-            return 'approximately ' + Math.round(elapsed/msPerYear ) + ' years ago';   
+            return Math.round(elapsed/msPerYear ) + ' years ago';   
         }
     }
    
@@ -57,6 +57,7 @@ function ChannelInfo ({searchData}){
             
             {searchData.items.map(data => (
                 <VideoRow
+                key={data.etag}
                 image={data.snippet.thumbnails.medium.url}
                 channel={data.snippet.channelTitle}
                 verified
