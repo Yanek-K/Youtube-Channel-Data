@@ -1,29 +1,29 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './RecommendedVideos.css'
-import axios from 'axios'
-
-require('dotenv').config();
-const api_key=process.env.REACT_APP_API_KEY
+import TrendingVideo from '../TrendingVideo/TrendingVideo'
 
 
-
-function RecommendedVideos () {
-
-    // const [trendingData, setTrendingData] = useState('')
-
-    // const fetchApi2 = async (searchTerm) => {
-    //     const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=US&key=${api_key}`
-    //     const response = await axios.get(url)
-    //     setTrendingData(response.data)
-    //     console.log(trendingData)
-    // }
-
-    // fetchApi2()
-
+function RecommendedVideos ({trendingData}) {
+    if (!trendingData) return ''
     
     return (
-        <div>
-
+        <div className="RecommendedVideos">
+            <h2>Trending</h2>
+            <div className="RecommendedVideos__videos">
+                {trendingData.items.map(data => (
+                    <TrendingVideo
+                    key={data.etag}
+                    image={data.snippet.thumbnails.medium.url}
+                    channel={data.snippet.channelTitle}
+                    verified
+                    subs='132'
+                    views="231"
+                    description={data.snippet.description}
+                    title={data.snippet.title}
+                    timestamp={data.snippet.publishedAt}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

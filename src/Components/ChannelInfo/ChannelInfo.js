@@ -65,7 +65,7 @@ function ChannelInfo ({searchData}){
                 views="231"
                 description={data.snippet.description}
                 title={data.snippet.title}
-                timestamp={timeDifference(current, previous)}
+                timestamp={timeDifference(current, Math.round(new Date(data.snippet.publishedAt)))}
             />
             ))}
         </div>

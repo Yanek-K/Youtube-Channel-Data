@@ -36,7 +36,7 @@ function App () {
 
 
   const fetchApi = async (searchTerm) => {
-      const url = `https://youtube.googleapis.com/youtube/v3/search?&part=snippet&q=${searchTerm}&maxResults=20&key=${api_key}`
+      const url = `https://youtube.googleapis.com/youtube/v3/search?&part=snippet&q=${searchTerm}&maxResults=20&key=${api_key_2}`
       const response = await axios.get(url)
       setSearchData(response.data)
 
@@ -44,6 +44,22 @@ function App () {
       // setSearchStats(response2)
       
     }
+
+  const [trendingData, setTrendingData] = useState('')
+
+  const fetchApi2 = async (searchTerm) => {
+      const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=US&key=${api_key}`
+      const response = await axios.get(url)
+      setTrendingData(response.data)
+      
+  }
+
+
+  useEffect(()=>{
+      fetchApi2()
+  }, [])
+
+  console.log(trendingData)
 
 
   return (
@@ -60,7 +76,7 @@ function App () {
           <Route path = '/'>
             <div className="App__page">
               <Sidebar />
-              <RecommendedVideos />
+              <RecommendedVideos trendingData={trendingData} />
             </div>
           </Route>
         </Switch>
