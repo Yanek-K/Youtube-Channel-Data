@@ -11,7 +11,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar'
 
 
-function Header (){
+function Header ({searchTerm, handleChange, handleClick, value}){
     
     
     return (
@@ -26,8 +26,8 @@ function Header (){
             </div>
 
             <div className="header__input">
-                <input text="text" placeholder="Search" />
-                <SearchIcon className = "header__inputButton" />
+                <input value={searchTerm} onChange={handleChange} text="text" placeholder="Search" />
+                <SearchIcon className = "header__inputButton" onClick={handleClick} />
             </div>
 
             <div className="header__icons">

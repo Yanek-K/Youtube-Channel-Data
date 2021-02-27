@@ -15,24 +15,36 @@ const api_key = process.env.REACT_APP_API_KEY
 
 
 function App () {
-  const [searchTerm, setSearchTerm] = useState('deved')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [searchData, setSearchData] = useState('')
+ 
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value)
+  }
+
+
+  const handleClick = () => {
+    fetchApi(searchTerm)
+  }
+  
+
+  console.log(searchData)
 
 
   const fetchApi = async (searchTerm) => {
-    const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&key=${api_key}`
-    const response = await axios.get(url)
-    console.log(response)
-  }
+      const url = `https://youtube.googleapis.com/youtube/v3/search?&part=snippet&q=${searchTerm}&maxResults=20&key=${api_key}`
+      const response = await axios.get(url)
+      setSearchData(response.data)
+    }
 
-  useEffect(() => {
-    fetchApi()
-  }, [])
 
   return (
     <div>
-      <Header />
-      {/* <Sidebar /> */}
-      <ChannelInfo />
+      <Header value={searchTerm} handleChange={handleChange} handleClick={handleClick} />
+      <div className="App__page">
+        <Sidebar />
+        <ChannelInfo searchData={searchData} />
+      </div>
     </div>
   )
 
