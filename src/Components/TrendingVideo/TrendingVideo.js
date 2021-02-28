@@ -12,7 +12,7 @@ function TrendingVideo ({image, title, channel, timestamp, views}) {
                     <h4>{title}</h4>
                     <p>{channel}</p>
                     <p>
-                        {views} . {timestamp}
+                        {views} views • {timestamp}
                     </p>
                 </div>
 

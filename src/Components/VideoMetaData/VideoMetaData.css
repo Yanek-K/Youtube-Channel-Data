@@ -1,0 +1,96 @@
+.VideoMetaData {
+    margin-left: 130px;
+    width: 1150px;
+
+}
+
+.VideoMetaData__top{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.VideoMetaData__top > h4 {
+    font-size: 22px;
+}
+
+.VideoMetaData__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.VideoMetaData__likes {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.VideoMetaData__likes > span {
+    margin-right: 20px;
+    align-self: center;
+    color: #757575;
+}
+
+.VideoMetaData__icon {
+    margin-right: 10px;
+
+}
+
+.VideoMetaData > hr {
+    color: lightgray;
+    height: 0.2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.VideoMetaData__channel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 2px;
+    margin-bottom: 20px;
+}
+
+.VideoMetaData__channelData {
+    display: flex;
+ 
+}
+
+
+.VideoMetaData__channelInfo {
+    padding-left: 10px;
+    margin-left: 10px;
+  
+}
+
+.VideoMetaData__channelInfo > p {
+    color: #7e7e7e;
+
+}
+
+.Subscribe__button{
+    padding: 9px;
+    border-radius: 3px;
+    color: white;
+    background-color: #c4302b;
+    border: none;
+    margin-right: 25px;
+    
+}
+
+.VideMetaData__description {
+    display: flex;
+    width: 30%;
+    padding-left: 20px;
+    margin-left: 41px;
+}
+

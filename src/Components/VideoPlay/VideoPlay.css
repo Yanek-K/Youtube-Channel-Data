@@ -1,0 +1,8 @@
+.VideoPlay__player {
+    display: flex;
+    flex: 0.8;
+    height: 70vh;
+    /* width: 1150px; */
+    margin-left: 125px;
+    margin-top: 15px;
+}

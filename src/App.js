@@ -5,6 +5,7 @@ import ChannelInfo from './Components/ChannelInfo/ChannelInfo'
 import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
 import RecommendedVideos from './Components/RecommendedVideos/RecommendedVideos'
+import VideoPlay from './Components/VideoPlay/VideoPlay'
 
 //Style
 import './App.css';
@@ -48,7 +49,7 @@ function App () {
   const [trendingData, setTrendingData] = useState('')
 
   const fetchApi2 = async (searchTerm) => {
-      const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=US&key=${api_key}`
+      const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=60&regionCode=US&key=${api_key}`
       const response = await axios.get(url)
       setTrendingData(response.data)
       
@@ -73,10 +74,15 @@ function App () {
               <ChannelInfo searchData={searchData} />
             </div>
           </Route>
-          <Route path = '/'>
+          <Route path = '/' exact>
             <div className="App__page">
               <Sidebar />
               <RecommendedVideos trendingData={trendingData} />
+            </div>
+          </Route>
+          <Route path = '/watch/:id'>
+            <div className="App__page">
+              <VideoPlay />
             </div>
           </Route>
         </Switch>
