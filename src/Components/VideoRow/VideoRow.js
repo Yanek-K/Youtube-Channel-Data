@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar'
+
 import './VideoRow.css'
 
 function VideoRow({views, subs, description, channel, title, image, timestamp}) {

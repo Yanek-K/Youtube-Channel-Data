@@ -1,7 +1,6 @@
 .VideoMetaData {
-    margin-left: 130px;
+    margin-left: 0px;
     width: 1150px;
-
 }
 
 .VideoMetaData__top{
@@ -11,6 +10,7 @@
 
 .VideoMetaData__top > h4 {
     font-size: 22px;
+    
 }
 
 .VideoMetaData__data {
@@ -22,6 +22,7 @@
     padding-bottom: 3px;
     margin-bottom: 5px;
     font-size: 15px;
+    
 }
 
 .VideoMetaData__likes {
@@ -29,12 +30,13 @@
     align-items: center;
     padding-right: 10px;
     justify-content: space-evenly;
+    
     font-size: 15px;
 }
 
 .VideoMetaData__likes > span {
     margin-right: 20px;
-    align-self: center;
+    align-items: center;
     color: #757575;
 }
 
@@ -43,10 +45,15 @@
 
 }
 
+.VideoMetaData__likes > span > p {
+    display: inline-flex;
+    justify-items: center;
+}
+
 .VideoMetaData > hr {
     color: lightgray;
     height: 0.2px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -84,7 +91,13 @@
     background-color: #c4302b;
     border: none;
     margin-right: 25px;
+    text-transform: uppercase;
+ 
     
+}
+
+.Subscribe__button:hover {
+    color: #fff
 }
 
 .VideMetaData__description {
@@ -92,5 +105,14 @@
     width: 30%;
     padding-left: 20px;
     margin-left: 41px;
+    font-size: 0.9em;  
 }
 
+.showMoreText{
+    text-decoration: none;
+    display: block;
+    color: black;
+    margin: 1rem 0;
+    font-weight: 500;
+
+}

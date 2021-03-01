@@ -6,6 +6,7 @@ import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
 import RecommendedVideos from './Components/RecommendedVideos/RecommendedVideos'
 import VideoPlay from './Components/VideoPlay/VideoPlay'
+import RelatedVideos from './Components/RelatedVideos/RelatedVideos'
 
 //Style
 import './App.css';
@@ -83,6 +84,7 @@ function App () {
           <Route path = '/watch/:id'>
             <div className="App__page">
               <VideoPlay />
+              
             </div>
           </Route>
         </Switch>

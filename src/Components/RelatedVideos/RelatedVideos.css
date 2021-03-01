@@ -1,0 +1,42 @@
+.RelatedVideos {
+    display: flex;
+    margin: 5px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    align-items: center;
+    height: 80px;
+
+
+}
+
+.RelatedVideos__left {
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+.RelatedVideos__left > img {
+    width: 150px;
+    height: auto;
+   
+}
+
+.RelatedVideos__right {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.RelatedVideos__channel {
+    font-size: 0.8em;
+    padding-top: 8px;
+}
+
+.RelatedVideos__data {
+    font-size: 0.8em;
+    padding-top: 3px;
+
+}

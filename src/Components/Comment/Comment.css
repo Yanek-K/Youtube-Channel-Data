@@ -1,0 +1,20 @@
+.Comments {
+    font-size: 0.9rem;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.Comments__body {
+    width: 1100px;
+    margin-bottom: 30px;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.Comments__header {
+    display: flex;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+
+}

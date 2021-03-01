@@ -1,8 +1,29 @@
+.VideoPlay {
+    width: 100%;
+}
+
+.VideoPlay__main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(11,1fr);
+}
+
 .VideoPlay__player {
-    display: flex;
-    flex: 0.8;
+    display: grid;
+    grid-column: 1/9;
+    height: 120vh;
+    width: 88%;
+    margin-left: 85px;
+    margin-top: 15px;
+}
+
+.VideoPlay__video {
     height: 70vh;
-    /* width: 1150px; */
-    margin-left: 125px;
+}
+
+.VideoPlay__RelatedVideos {
+    display: grid;
+    grid-column: 9/11;
+    margin-left: 0px;
     margin-top: 15px;
 }

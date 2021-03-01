@@ -1,7 +1,10 @@
 import React from 'react'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ThumbDownIcon from '@material-ui/icons/ThumbDown';import Avatar from '@material-ui/core/Avatar'
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
+import Avatar from '@material-ui/core/Avatar'
 import './VideoMetaData.css'
+import ShowMoreText from 'react-show-more-text'
+
 
 function VideoMetaData () {
     return (
@@ -13,11 +16,11 @@ function VideoMetaData () {
                    <div className="VideoMetaData__likes">
                        <span>
                             <ThumbUpIcon className="VideoMetaData__icon"/>
-                            20
+                            <p>20</p>
                         </span>
                         <span>
                             <ThumbDownIcon className="VideoMetaData__icon"/>
-                            10
+                            <p>10</p>
                         </span>
                     </div>
                 </div>
@@ -35,13 +38,21 @@ function VideoMetaData () {
                 <button className="Subscribe__button">Subscribe</button>
             </div>
             <div className="VideMetaData__description">
+                <ShowMoreText
+                    lines={3}
+                    more="SHOW MORE"
+                    less="SHOW LESS"
+                    anchorClass="showMoreText"
+                    expanded={false}
+                    >
                 lorem ipsum decor meoid terit askd amsdk wojs
                 lorem ipsum decor meoid terit askd amsdk wojs
                 lorem ipsum decor meoid terit askd amsdk wojs
                 lorem ipsum decor meoid terit askd amsdk wojs
                 lorem ipsum decor meoid terit askd amsdk wojs
                 lorem ipsum decor meoid terit askd amsdk wojs
-                lorem ipsum decor meoid terit askd amsdk wojs
+                lore
+                </ShowMoreText>
             </div>
             <hr />
         </div>
