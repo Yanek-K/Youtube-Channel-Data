@@ -58,6 +58,7 @@ function ChannelInfo ({searchData}){
             {searchData.items.map(data => (
                 <VideoRow
                 key={data.etag}
+                id={data.id}
                 image={data.snippet.thumbnails.medium.url}
                 channel={data.snippet.channelTitle}
                 verified

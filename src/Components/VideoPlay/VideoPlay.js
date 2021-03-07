@@ -1,16 +1,19 @@
 import React from 'react'
+import {useParams} from 'react-router-dom'
 import "./VideoPlay.css"
 import VideoMetaData from '../VideoMetaData/VideoMetaData'
 import VideoPlayComments from '../VideoPlayComments/VideoPlayComments'
 import RelatedVideos from '../RelatedVideos/RelatedVideos'
 
 function VideoPlay () {
+    const {id} = useParams()
+
     return (
         <div className="VideoPlay">
             <div className="VideoPlay__main">
                 <div className="VideoPlay__player">
                     <div className="VideoPlay__video">
-                        <iframe src = 'https://youtube.com/embed/tgbNymZ7vqY'
+                        <iframe src = {`https://youtube.com/embed/${id}`}
                             frameBorder="0"
                             title="Title"
                             allowFullScreen

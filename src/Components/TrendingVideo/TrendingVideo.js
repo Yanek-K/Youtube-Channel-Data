@@ -1,10 +1,14 @@
 import React from 'react'
+
 import Avatar from '@material-ui/core/Avatar'
 import './TrendingVideo.css'
 
-function TrendingVideo ({image, title, channel, timestamp, views}) {
+function TrendingVideo ({image, title, channel, timestamp, views, id}) {
+
+    
+
     return (
-        <div className="TrendingVideo">
+        <div className="TrendingVideo" >
             <img className="TrendingVideo__thumbnail" src={image} alt='' />
             <div className="TrendingVideo__info">
                 <Avatar className="TrendingVideo__avatar" alt={channel} src={image} />
